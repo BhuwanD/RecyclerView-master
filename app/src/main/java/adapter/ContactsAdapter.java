@@ -40,7 +40,8 @@ public  class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.Conta
         contactsViewHolder.imgProfile.setImageResource(contacts.getImageid());
         contactsViewHolder.tvname.setText(contacts.getName());
         contactsViewHolder.tvcontact.setText(contacts.getPhonenumber());
-
+        contactsViewHolder.tvemail.setText(contacts.getEmail());
+        contactsViewHolder.tvaddress.setText(contacts.getAddress());
 
     }
 
@@ -51,13 +52,15 @@ public  class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.Conta
 
     public class ContactsViewHolder extends RecyclerView.ViewHolder{
         CircleImageView imgProfile;
-        TextView tvname,tvcontact;
+        TextView tvname,tvcontact,tvemail,tvaddress;
 
         public ContactsViewHolder(@NonNull View itemView){
             super(itemView);
             imgProfile=itemView.findViewById(R.id.imgProfile);
             tvname=itemView.findViewById(R.id.tvname);
             tvcontact=itemView.findViewById(R.id.tvcontact);
+            tvemail=itemView.findViewById(R.id.tvemail);
+            tvaddress=itemView.findViewById(R.id.tvaddress);
         }
     }
 }
